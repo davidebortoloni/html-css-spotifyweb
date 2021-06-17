@@ -1,0 +1,43 @@
+header {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.container {
+    height: calc(100vh - 80px);
+    color: white;
+}
+
+.container nav {
+    background-color: black;
+}
+
+.container main {
+    padding: 120px 30px 0 30px;
+    height: 100%;
+    background-color: #121212;
+    overflow-y: auto;
+}
+
+footer {
+    height: 80px;
+    background-color: #181818;
+}
+
+@media screen and (max-width: 575px) {
+    .container nav {
+        width: 60px;
+    }
+    .container main {
+        width: calc(100vw - 60px);
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .container nav {
+        width: 250px;
+    }
+    .container main {
+        width: calc(100vw - 250px);
+    }
+}

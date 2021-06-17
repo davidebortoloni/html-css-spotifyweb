@@ -2,11 +2,35 @@
     font-family: sans-serif;
 }
 
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 12px;
+}
+.cover {
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 15px;
+}
+.cover:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+
 header {
-    height: 100px;
+    height: 80px;
     width: 100%;
     background-color: rgba(0, 2, 8, 0.6);
     padding: 0 20px;
+    z-index: 1;
 }
 header .btn a {
     border-radius: 25px;
@@ -20,6 +44,7 @@ header .btn a {
 header .btn a:hover {
     transform: scale(1.1) translate(-10px);
 }
+
 .container {
     height: calc(100vh - 80px);
 }
@@ -27,7 +52,7 @@ header .btn a:hover {
     background-color: black;
     overflow-y: hidden;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 .container main {
     background-color: #141922;
@@ -35,12 +60,7 @@ header .btn a:hover {
     height: 100%;
     padding: 130px 30px 0 30px;
 }
-footer {
-    background-color: #282828;
-    height: 80px;
-    position: relative;
-    z-index: 2;
-}
+
 .explore ul {
     font-size: 13px;
     text-transform: uppercase;
@@ -49,6 +69,7 @@ footer {
 .explore li {
     display: inline-block;
     position: relative;
+    height: 50px;
 }
 .explore li a {
     padding: 5px 10px;
@@ -71,6 +92,40 @@ footer {
     width: 40px;
 }
 
+.recent .col {
+    padding-right: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.recent .cover.one {
+    background-image: url("../img/metal_lifting.jpg");
+}
+.recent .cover.two {
+    background-image: url("../img/stranger.jpeg");
+}
+.recent .cover.three {
+    background-image: url("../img/aquietplace.jpeg");
+}
+.recent .cover.four {
+    background-image: url("../img/split.jpeg");
+}
+.recent .cover.five {
+    background-image: url("../img/cure.jpeg");
+}
+.recent .cover.six {
+    background-image: url("../img/sinister.jpeg");
+}
+.recent h4 {
+    color: #7A7D81;
+}
+
+footer {
+    background-color: #282828;
+    height: 80px;
+    position: relative;
+    z-index: 2;
+}
+
 @media screen and (max-width: 575px) {
     .container nav {
         width: 60px;
@@ -81,9 +136,9 @@ footer {
 }
 @media screen and (min-width: 576px) {
     .container nav {
-        width: 250px;
+        width: 220px;
     }
     .container main {
-        width: calc(100% - 250px);
+        width: calc(100% - 220px);
     }
 }

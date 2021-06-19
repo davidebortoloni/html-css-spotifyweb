@@ -4,7 +4,6 @@
 
 h2 {
     color: white;
-    margin-bottom: 20px;
 }
 h3 {
     color: white;
@@ -12,6 +11,9 @@ h3 {
 }
 h4 {
     font-size: 12px;
+}
+h5 {
+    font-size: 11px;
 }
 .cover {
     width: 100%;
@@ -22,6 +24,9 @@ h4 {
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+.title {
+    margin-bottom: 30px;
 }
 
 
@@ -48,7 +53,7 @@ header .btn a:hover {
 .container {
     height: calc(100vh - 80px);
 }
-.container nav {
+.container .sidebar {
     background-color: black;
     overflow-y: hidden;
     height: 100%;
@@ -59,6 +64,13 @@ header .btn a:hover {
     overflow-y: auto;
     height: 100%;
     padding: 130px 30px 0 30px;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+main nav {
+    margin-bottom: 15px;
 }
 
 .explore ul {
@@ -92,11 +104,13 @@ header .btn a:hover {
     width: 40px;
 }
 
-.recent .col {
+.for-you .col,
+.recent .col,
+.popular .col {
     padding-right: 10px;
     text-align: center;
-    margin-bottom: 15px;
 }
+
 .recent .cover.one {
     background-image: url("../img/metal_lifting.jpg");
 }
@@ -119,6 +133,30 @@ header .btn a:hover {
     color: #7A7D81;
 }
 
+.for-you .cover.one {
+    background-image: url("../img/radar.jpeg");
+}
+.for-you .cover.two {
+    background-image: url("../img/mixdaily.jpeg");
+}
+.for-you h2,
+.popular h2 {
+    margin-bottom: 10px;
+}
+.for-you h5,
+.popular h5 {
+    color: #7A7D81;
+}
+.popular .cover {
+    border-radius: 50%;
+}
+.popular .cover.one {
+    background-image: url("../img/youg.jpeg");
+}
+.popular .cover.two {
+    background-image: url("../img/einaudi.jpeg");
+}
+
 footer {
     background-color: #282828;
     height: 80px;
@@ -127,7 +165,7 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
-    .container nav {
+    .container .sidebar {
         width: 60px;
     }
     .container main {
@@ -135,7 +173,7 @@ footer {
     }
 }
 @media screen and (min-width: 576px) {
-    .container nav {
+    .container .sidebar {
         width: 220px;
     }
     .container main {

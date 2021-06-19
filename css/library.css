@@ -328,7 +328,7 @@
         align-items: flex-end;
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 825px) {
     .row.equal-md > .col {
         flex-grow: 1;
     }
@@ -471,7 +471,7 @@
         align-items: flex-end;
     }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1090px) {
     .row.equal-lg > .col {
         flex-grow: 1;
     }

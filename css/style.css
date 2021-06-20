@@ -28,6 +28,10 @@ h5 {
 .title {
     margin-bottom: 30px;
 }
+#logo {
+    width: 70%;
+    margin: 15px 0 0 15px;
+}
 
 
 header {
@@ -58,6 +62,7 @@ header .btn a:hover {
     overflow-y: hidden;
     height: 100%;
     z-index: 2;
+    position: relative;
 }
 .container main {
     background-color: #141922;
@@ -67,7 +72,7 @@ header .btn a:hover {
 }
 
 main section {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 main nav {
     margin-bottom: 15px;
@@ -109,6 +114,7 @@ main nav {
 .popular .col {
     padding-right: 10px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .recent .cover.one {
@@ -157,11 +163,202 @@ main nav {
     background-image: url("../img/einaudi.jpeg");
 }
 
+.sidebar nav {
+    margin-top: 15px;
+}
+.sidebar nav li {
+    margin-top: 10px;
+    padding-left: 15px;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+.sidebar nav li a {
+    color: #7A7D81;
+    text-decoration: none;
+}
+.sidebar .icon {
+    width: 20px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+.sidebar nav li.current {
+    border-left: 2px solid #ADFF2F;
+}
+.sidebar nav li.current path {
+    fill: #d2d2d2;
+}
+.sidebar nav li.current a {
+    color: white;
+}
+.sidebar h6 {
+    color: white;
+    margin: 0 0 10px 15px;
+}
+.sidebar .playlist {
+    margin-top: 20px;
+    height: 250px;
+}
+.sidebar .playlist .add {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #a3a3a3;
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.sidebar .playlist .crea-playlist {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #7A7D81
+}
+.sidebar .playlist ul {
+    overflow-y: auto;
+}
+.sidebar .playlist li {
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+.sidebar .bottom-section {
+    width: 100%;
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+}
+.sidebar .bottom-section .download {
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+.sidebar .bottom-section .download a {
+    text-decoration: none;
+    color: #7A7D81;
+}
+.sidebar .bottom-section .download-app {
+    width: 12px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.sidebar .bottom-section hr {
+    width: 100%;
+    border-color: #7A7D81;
+}
+.sidebar .bottom-section .account {
+    margin-top: 5px;
+}
+.sidebar .bottom-section .account a {
+    text-decoration: none;
+}
+.sidebar .bottom-section .account-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #808080;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px 5px 0 0;
+    vertical-align: middle;
+}
+.sidebar .bottom-section .account-icon svg {
+    width: 100%;
+}
+.sidebar .bottom-section .user-name {
+    display: inline-block;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+
 footer {
     background-color: #282828;
     height: 80px;
     position: relative;
     z-index: 2;
+    padding: 0 15px;
+}
+footer .in-playback img {
+    width: 30px;
+    margin-right: 8px;
+}
+footer .in-playback .song-info {
+    margin-right: 25px;
+}
+footer .in-playback .song-info a {
+    text-decoration: none;
+}
+footer .in-playback .song-title {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+footer .in-playback .song-author {
+    color: #7A7D81;
+    font-size: 9px;
+    font-weight: bold;
+}
+footer .in-playback .song-actions > * {
+    color: #7A7D81;
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+footer .playback-controls {
+    color: white;
+}
+footer .playback-controls {
+    text-align: center;
+}
+footer .playback-buttons > i {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#play {
+    font-size: 24px;
+}
+footer .progress-bar {
+    font-size: 10px;
+}
+footer .bar {
+    display: inline-block;
+    height: 3px;
+    background-color: #5a5a5a;
+    margin: 0 10px;
+    vertical-align: middle;
+    position: relative;
+}
+footer .progress-bar .bar {
+    width: 25vw;
+}
+footer .progress-bar .progress {
+    width: 20%;
+}
+footer .secondary-controls {
+    color: white;
+    font-size: 12px;
+}
+footer .secondary-controls > i {
+    cursor: pointer;
+    padding: 0 7px;
+}
+footer .secondary-controls .bar {
+    width: 5vw;
+}
+footer .secondary-controls .bar .progress {
+    width: 20%;
+}
+footer .bar .progress {
+    position: absolute;
+    height: 3px;
+    background-color: white;
 }
 
 @media screen and (max-width: 575px) {

@@ -2,28 +2,27 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Stilizzazione elementi generici */
 h2 {
     color: white;
+    margin-top: 15px;
 }
 h3 {
     color: white;
-    margin-bottom: 10px;
+    margin-top: 15px;
 }
 h4 {
     font-size: 12px;
+    color: #7A7D81;
+    margin-top: 10px;
 }
 h5 {
+    margin-top: 10px;
     font-size: 11px;
+    color: #7A7D81
 }
-.cover {
-    width: 100%;
-    background-size: cover;
-    margin-bottom: 15px;
-}
-.cover:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+h6 {
+    color: white;
 }
 .title {
     margin-bottom: 30px;
@@ -32,14 +31,51 @@ h5 {
     width: 70%;
     margin: 15px 0 0 15px;
 }
+#logo-small {
+    display: none;
+}
 
-
-header {
-    height: 80px;
+/* Copertine album/canzoni/artisti */
+.cover {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cover img {
     width: 100%;
+    display: block;
+}
+.cover .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.cover:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cover .fa-play-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    display: none;
+}
+.cover:hover .fa-play-circle {
+    display: block;
+}
+
+/********* STILIZZAZIONE BARRA SUPERIORE *********/
+header {
+    width: calc(100% - 220px);
+    height: 80px;
     background-color: rgba(0, 2, 8, 0.6);
     padding: 0 20px;
     z-index: 1;
+    top: 0;
+    right: 0;
 }
 header .btn a {
     border-radius: 25px;
@@ -54,115 +90,28 @@ header .btn a:hover {
     transform: scale(1.1) translate(-10px);
 }
 
+/********* STILIZZAZIONE CONTENUTO PRINCIPALE *********/
+/* Regole generali alla sezione */
 .container {
     height: calc(100vh - 80px);
 }
 .container .sidebar {
-    background-color: black;
-    overflow-y: hidden;
+    width: 220px;
     height: 100%;
-    z-index: 2;
+    background-color: black;
+    overflow: hidden;
     position: relative;
 }
 .container main {
+    width: calc(100% - 220px);
+    height: 100%;
     background-color: #141922;
     overflow-y: auto;
-    height: 100%;
     padding: 130px 30px 0 30px;
-}
-
-main section {
     margin-bottom: 15px;
 }
-main nav {
-    margin-bottom: 15px;
-}
-
-.explore ul {
-    font-size: 13px;
-    text-transform: uppercase;
-    list-style-type: none;
-}
-.explore li {
-    display: inline-block;
-    position: relative;
-    height: 50px;
-}
-.explore li a {
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #7A7D81;
-    font-weight: bold;
-}
-.explore li a:hover {
-    color: white;
-}
-.explore hr {
-    margin-top: 10px;
-    border-color: transparent;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-.explore .current hr {
-    border-bottom: 3px solid #ADFF2F;
-    width: 40px;
-}
-
-.for-you .col,
-.recent .col,
-.popular .col {
-    padding-right: 10px;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.recent .cover.one {
-    background-image: url("../img/metal_lifting.jpg");
-}
-.recent .cover.two {
-    background-image: url("../img/stranger.jpeg");
-}
-.recent .cover.three {
-    background-image: url("../img/aquietplace.jpeg");
-}
-.recent .cover.four {
-    background-image: url("../img/split.jpeg");
-}
-.recent .cover.five {
-    background-image: url("../img/cure.jpeg");
-}
-.recent .cover.six {
-    background-image: url("../img/sinister.jpeg");
-}
-.recent h4 {
-    color: #7A7D81;
-}
-
-.for-you .cover.one {
-    background-image: url("../img/radar.jpeg");
-}
-.for-you .cover.two {
-    background-image: url("../img/mixdaily.jpeg");
-}
-.for-you h2,
-.popular h2 {
-    margin-bottom: 10px;
-}
-.for-you h5,
-.popular h5 {
-    color: #7A7D81;
-}
-.popular .cover {
-    border-radius: 50%;
-}
-.popular .cover.one {
-    background-image: url("../img/youg.jpeg");
-}
-.popular .cover.two {
-    background-image: url("../img/einaudi.jpeg");
-}
-
+/**** Barra laterale ****/
+/* Primo menù */
 .sidebar nav {
     margin-top: 15px;
 }
@@ -177,6 +126,13 @@ main nav {
     color: #7A7D81;
     text-decoration: none;
 }
+.sidebar nav li:hover a {
+    color: white;
+}
+.sidebar nav li:hover a path {
+    fill: white;
+    
+}
 .sidebar .icon {
     width: 20px;
     margin-right: 2px;
@@ -186,18 +142,18 @@ main nav {
     border-left: 2px solid #ADFF2F;
 }
 .sidebar nav li.current path {
-    fill: #d2d2d2;
+    fill: white;
 }
 .sidebar nav li.current a {
     color: white;
 }
-.sidebar h6 {
-    color: white;
-    margin: 0 0 10px 15px;
-}
+/* Secondo menù contenente le playlist*/
 .sidebar .playlist {
     margin-top: 20px;
     height: 250px;
+}
+.sidebar h6 {
+    margin: 0 0 10px 15px;
 }
 .sidebar .playlist .add {
     width: 30px;
@@ -217,14 +173,17 @@ main nav {
     font-weight: bold;
     color: #7A7D81
 }
-.sidebar .playlist ul {
-    overflow-y: auto;
+.sidebar .playlist .crea-playlist:hover {
+    color: white;
+}
+.sidebar .playlist .crea-playlist:hover .add {
+    background-color: white;
 }
 .sidebar .playlist li {
     margin-top: 15px;
     font-size: 10px;
 }
-
+/* Sezione inferiore della barra laterale */
 .sidebar .bottom-section {
     width: 100%;
     padding: 5px 15px;
@@ -241,10 +200,18 @@ main nav {
     text-decoration: none;
     color: #7A7D81;
 }
+.sidebar .bottom-section .download a:hover {
+    color: white;
+}
+.sidebar .bottom-section .download a:hover path {
+    fill: white;
+}
 .sidebar .bottom-section .download-app {
-    width: 12px;
+    width: 20px;
     vertical-align: middle;
-    margin-right: 5px;
+}
+.sidebar .bottom-section .download .writing {
+    padding-left: 10px;
 }
 .sidebar .bottom-section hr {
     width: 100%;
@@ -253,17 +220,14 @@ main nav {
 .sidebar .bottom-section .account {
     margin-top: 5px;
 }
-.sidebar .bottom-section .account a {
-    text-decoration: none;
-}
 .sidebar .bottom-section .account-icon {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: #808080;
     border-radius: 50%;
     overflow: hidden;
-    margin: 5px 5px 0 0;
+    margin-top: 5px;
     vertical-align: middle;
 }
 .sidebar .bottom-section .account-icon svg {
@@ -274,14 +238,68 @@ main nav {
     color: white;
     font-size: 11px;
     font-weight: bold;
+    padding-left: 5px;
+}
+.sidebar .writing {
+    display: inline-block;
 }
 
+
+/**** Sezione centrale ****/
+/* Menù di navigazione principale */
+.explore ul {
+    font-size: 13px;
+    text-transform: uppercase;
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+.explore li {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.explore li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #7A7D81;
+    font-weight: bold;
+}
+.explore li a:hover {
+    color: white;
+}
+.explore li.current::after {
+    content: "";
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background-color: #ADFF2F;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* Regola generale a tutte le sezioni del main */
+section .col {
+    padding-right: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Regole specifiche sezione Popular */
+.popular .cover {
+    border-radius: 50%;
+}
+
+/********* STILIZZAZIONE BARRA INFERIORE *********/
 footer {
     background-color: #282828;
     height: 80px;
-    position: relative;
-    z-index: 2;
+    z-index: 3;
     padding: 0 15px;
+}
+/* Sezione con le info della canzone in riproduzione */
+footer .in-playback a {
+    text-decoration: none;
 }
 footer .in-playback img {
     width: 30px;
@@ -290,90 +308,155 @@ footer .in-playback img {
 footer .in-playback .song-info {
     margin-right: 25px;
 }
-footer .in-playback .song-info a {
-    text-decoration: none;
-}
 footer .in-playback .song-title {
     color: white;
     font-size: 11px;
     font-weight: bold;
+}
+footer .in-playback .song-title:hover {
+    text-decoration: underline;
 }
 footer .in-playback .song-author {
     color: #7A7D81;
     font-size: 9px;
     font-weight: bold;
 }
-footer .in-playback .song-actions > * {
+footer .in-playback .song-author:hover {
+    color: white;
+    text-decoration: underline;
+}
+footer .in-playback .song-actions i {
     color: #7A7D81;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     margin-right: 10px;
     cursor: pointer;
 }
-footer .playback-controls {
+footer .in-playback .song-actions i:hover {
     color: white;
 }
+/* Sezione con progress bar */
 footer .playback-controls {
+    color: #b3b3b3;
     text-align: center;
 }
-footer .playback-buttons > i {
+footer .playback-buttons i {
     padding: 10px;
     font-size: 14px;
     cursor: pointer;
 }
+footer .playback-buttons i:hover {
+    color: white;
+}
 #play {
     font-size: 24px;
+    color: white;
+}
+#play:hover {
+    transform: scale(1.2);
+}
+footer .playback-buttons .fa-undo-alt {
+    transform: scale(-1, 1);
 }
 footer .progress-bar {
     font-size: 10px;
 }
-footer .bar {
-    display: inline-block;
-    height: 3px;
-    background-color: #5a5a5a;
-    margin: 0 10px;
-    vertical-align: middle;
-    position: relative;
-}
 footer .progress-bar .bar {
     width: 25vw;
 }
-footer .progress-bar .progress {
-    width: 20%;
+footer .bar:hover .progress {
+    background-color: #ADFF2F;
 }
+/* Sezione con comandi secondari */
 footer .secondary-controls {
-    color: white;
+    color: #b3b3b3;
     font-size: 12px;
 }
-footer .secondary-controls > i {
+footer .secondary-controls i {
     cursor: pointer;
     padding: 0 7px;
+}
+footer .secondary-controls i:hover {
+    color: white;
 }
 footer .secondary-controls .bar {
     width: 5vw;
 }
-footer .secondary-controls .bar .progress {
-    width: 20%;
+/* Regole per elementi generici del footer */
+footer .bar {
+    display: inline-block;
+    height: 4px;
+    background-color: #5a5a5a;
+    margin: 0 10px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
 }
 footer .bar .progress {
     position: absolute;
-    height: 3px;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-color: white;
+    position: relative;
+}
+footer .progress .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(100% - 7px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    display: none;
+}
+footer .bar:hover .progress .circle {
+    display: block;
 }
 
+/* Informazioni per responsive */
 @media screen and (max-width: 575px) {
-    .container .sidebar {
-        width: 60px;
-    }
     .container main {
-        width: calc(100% - 60px);
+        width: calc(100% - 45px);
     }
-}
-@media screen and (min-width: 576px) {
+    header {
+        width: calc(100% - 45px);
+    }
+    .sidebar nav li.current {
+        border-left: none;
+    }
     .container .sidebar {
-        width: 220px;
+        padding: 8px;
+        width: 45px;
+        text-align: center;
     }
-    .container main {
-        width: calc(100% - 220px);
+    #logo,
+    .sidebar .playlist,
+    .sidebar .writing,
+    .sidebar .bottom-section hr,
+    footer .in-playback,
+    .sidebar .bottom-section .user-name {
+        display: none;
+    }
+    #logo-small {
+        display: block;
+    }
+    #logo-small,
+    .sidebar nav .icon,
+    .account-icon {
+        width: 100%;
+    }
+    .sidebar nav li,
+    .sidebar .bottom-section {
+        width: auto;
+        padding: 0;
+        padding-bottom: 5px;
+    }
+    .sidebar .bottom-section .download-app,
+    .sidebar .bottom-section .account-icon {
+        margin-top: 0px;
+        margin-bottom: 5px;
     }
 }
